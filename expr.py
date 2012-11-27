@@ -181,19 +181,18 @@ class Rpn(object):
                 print stack.s()
         return stack.popAll()
 
-def main(str):    
+def main(aStr):    
     
-    stack = Stack()
-    queue = Queue()
-    vars = {'x': 18}
-    exp = Rpn(s2)
+    variables = {'x': 18}
+    exp = Rpn(aStr)
     rpn = exp.convert(False)
-    res = exp.evaluate(vars)
+    res = exp.evaluate(variables)
     print res
 
 if __name__ == '__main__':
     s1 = '(2+3)*5'
-    s2 = '((2+x)/3^2+(14-3)*4)/2'
+    s2 = '((210+11)/3^2+(14-3)*4)/2'
     main(s2)
+    # this is just a comment
 
 
